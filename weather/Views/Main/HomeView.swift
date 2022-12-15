@@ -24,10 +24,16 @@ struct HomeView: View {
           .font(.largeTitle)
 
         Text("19º")
+          .font(.system(size: 93, weight: .thin))
+          .padding(.top, -30)
+          .padding(.bottom, -15)
 
         Text("Mostly clear")
+          .font(.title3.weight(.semibold))
+          .foregroundColor(.secondary)
 
-        Text("H:24º   L:18º").font(.title3.weight(.semibold))
+        Text("H:24º   L:18º")
+          .font(.title3.weight(.semibold))
 
         Spacer()
       }
