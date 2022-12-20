@@ -34,7 +34,8 @@ struct SegmentedControl: View {
       .font(.subheadline.weight(.semibold))
       .foregroundColor(.secondary)
     }
-    .padding(.top, 25)
+    .padding(.top, 24)
+    .padding(.bottom, 16)
 
     Divider()
       .background(.white.opacity(0.5))

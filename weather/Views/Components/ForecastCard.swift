@@ -39,13 +39,14 @@ struct ForecastCard: View {
           Image("\(forecast.icon) small")
 
           Text(forecast.probability, format: .percent)
-            .font(.title3)
+            .font(.footnote.weight(.semibold))
+            .foregroundColor(.probabilityText)
+            .opacity(forecast.probability > 0 ? 1 : 0.5)
+            .padding(.top, 4)
         }
 
         Text("\(forecast.temperature)°")
-          .font(.footnote.weight(.semibold))
-          .foregroundColor(.probabilityText)
-          .opacity(forecast.probability > 0 ? 1 : 0)
+          .font(.title3)
       }
       .padding(.horizontal, 8)
       .padding(.vertical, 16)
