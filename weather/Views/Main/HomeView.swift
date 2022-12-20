@@ -62,6 +62,7 @@ struct HomeView: View {
           // MARK: BottomSheet
           BottomSheetView(position: $bottomSheetPosition, header: {}) {
             ForecastView(bottomSheetTranslationProrated: bottomSheetTranslationProrated)
+              .ignoresSafeArea(.all, edges: .bottom)
           }
           .onBottomSheetDrag { translation in
             bottomSheetTranslation = translation / screenHeight
